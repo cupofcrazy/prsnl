@@ -1,0 +1,20 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_165_2)">
+<rect width="256" height="256" rx="32" fill="#FFCBF0"/>
+<g filter="url(#filter0_f_165_2)">
+<path d="M204.5 149.5C70.9 149.5 40.8333 37.1667 42.5 -19H330.5V149.5H204.5Z" fill="#009BF2"/>
+<path d="M232.5 -26C232.5 197.6 72.8333 273.167 -7 283H271V-26H232.5Z" fill="#FFD600"/>
+<circle cx="131.5" cy="248.5" r="78.5" fill="#DBFF00"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_165_2" x="-127" y="-146" width="577.5" height="593" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="60" result="effect1_foregroundBlur_165_2"/>
+</filter>
+<clipPath id="clip0_165_2">
+<rect width="256" height="256" rx="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>
