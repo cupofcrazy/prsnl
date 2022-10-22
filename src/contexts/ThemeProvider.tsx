@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import React, { createContext, useState } from "react";
 
 
 type PropsWithChildren<T> = T & {
@@ -6,25 +6,24 @@ type PropsWithChildren<T> = T & {
 }
 export type ThemeOptions = Boolean
 
-
 interface ThemeProps {
-  theme: ThemeOptions
+  isDark: ThemeOptions
   toggleTheme: () => void
 }
 export const ThemeContext = createContext<ThemeProps>({
-  theme: true,
+  isDark: false,
   toggleTheme: (): void => {}
 })
 
-export const ThemeProvider = ({ children }: PropsWithChildren<ThemeProps>) => {
-  const [theme, setTheme] = useState<ThemeOptions>(true)
+export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
+  const [isDark, setIsDark] = useState<ThemeOptions>(false)
   const toggleTheme = (): void => {
-    setTheme(!theme)
-    if (theme) document.body.classList.add('dark')
-    else document.body.classList.remove('dark')
+    setIsDark(!isDark)
+    if (isDark) document.body.classList.remove('dark')
+    else document.body.classList.add('dark')
   }
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ isDark, toggleTheme }}>
       { children }
     </ThemeContext.Provider>
   )

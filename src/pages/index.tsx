@@ -9,8 +9,9 @@ import { useTheme } from '../hooks/useTheme'
 
 const Home: NextPage = () => {
   const { width } = useWindowResize()
-  const { theme, toggleTheme } = useTheme()
+  const { isDark, toggleTheme } = useTheme()
   const formattedWidthSize = `${width}px`
+  
 
   return (
     <Main>
@@ -26,7 +27,7 @@ const Home: NextPage = () => {
       <motion.p variants={itemVariant} style={{ color: 'var(--accent-color)' }}>Contains Next.js, Typescript, Styled Components, and Framer Motion</motion.p>
       <motion.p variants={itemVariant} style={{ color: 'var(--accent-color)' }}>Edit <Span>index.tsx</Span> to see changes 🚀</motion.p>
       <motion.p variants={itemVariant} style={{ color: 'var(--accent-color)' }}>Current window width size: <Span>{formattedWidthSize}</Span></motion.p>
-      <Button variants={itemVariant} onClick={() => toggleTheme()}>Switch to { theme ? 'Dark' : 'Light' } Theme</Button>
+      <Button variants={itemVariant} onClick={() => toggleTheme()}>Switch to { isDark ? 'Dark' : 'Light' } Theme</Button>
 
     </motion.div>
     </Main>

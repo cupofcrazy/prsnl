@@ -3,10 +3,10 @@ import { ThemeContext } from "../contexts/ThemeProvider";
 
 
 export const useTheme = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext)
+  const { isDark, toggleTheme } = useContext(ThemeContext)
   
   return {
-    theme,
+    isDark,
     toggleTheme
   }
 }
